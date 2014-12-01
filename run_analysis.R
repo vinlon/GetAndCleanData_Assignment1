@@ -1,3 +1,5 @@
+##setwd("/Users/liwenlong/Documents/Coursera/GetAndCleanData&ExploratoryAnalysis/Assignments/GetAndClean_Samsung")
+
 # test data
 subject_test<-read.table(file="./UCI HAR Dataset/test/subject_test.txt",stringsAsFactors = FALSE)
 X_test<-read.table(file="./UCI HAR Dataset/test/X_test.txt",stringsAsFactors = FALSE)
@@ -36,7 +38,7 @@ colnames(HAR)<-c("SubjectId",
                  featurelist)
 
 ## step2.Extracts only the measurements on the mean and standard deviation for each measurement.
-feature.selected<-featurelist[grepl("-mean\\(\\)-|-std\\(\\)-",featurelist)]
+feature.selected<-featurelist[grepl("mean\\(\\)|std\\(\\)",featurelist)]
 HAR<-HAR[,c("SubjectId","ActivityId","Bucket",feature.selected)]
 
 ## step3.Uses descriptive activity names to name the activities in the data set
