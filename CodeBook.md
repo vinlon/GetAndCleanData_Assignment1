@@ -86,5 +86,10 @@ Save the Summary Dataset to another txt file.
 * fBodyGyro-std()-Y
 * fBodyGyro-std()-Z
 
+## Comments from my classmates
+peer 1 → The code book (not "cook" book) is not just a list of the variables and the steps taken to process them. You need to explain where the original data came from, what it means, and what the variables actually measure. For example, it would be really useful to explain that these measurements are from the accelerometer in a smartphone, and that all mean/std measurements are derived from more basic measurements. The easiest way to do this is to copy some of the information from the original data set's features_info file. You should also have explained what the 48 selected features actually meant. By the way, there should be 66 selected features that used mean() or std(). Your grep functions require a hyphen ('-') to occur after the mean()/std(), but there were some features that had mean at the end of the variable name, so there was no hyphen at the end. Technically, this made your script run the incorrect analysis, but I thought it was minor enough that I only took marks off for the codebook.
+
+peer 2 → I gave 6 for the data set tidiness because point 4 (give clean names to the variables) was not done and was stubbed in a script. Besides, two data sets were submitted while it was only required to submit one (well it's a minor thing). I gave 6 for the code book because instead of describing the overall repo and code structure and the algorithms in Readme.md and the variables in CodeBook.md there was a file named CookBook.md with mixed algorithm and data. I think everything should be tidy, not only the dataset.
+
 
 
