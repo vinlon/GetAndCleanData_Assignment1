@@ -45,6 +45,9 @@ HAR<-HAR[,c("SubjectId","ActivityId","Bucket",feature.selected)]
 HAR<-merge(x = HAR,y = activity_labels,by = "ActivityId")
 HAR$Activity<-as.factor(HAR$Activity)
 
+#sort the data
+HAR<-HAR[order(HAR$SubjectId,HAR$ActivityId),]
+
 ## step4. check the variable name and data type. 
 str(HAR)
 
